@@ -1,0 +1,225 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url('../fonts/Lato/Lato-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Lato-Bold;
+    src: url('../fonts/Lato/Lato-Bold.ttf'); 
+  }
+  
+  .intro {
+    color: rgb(141, 141, 141);
+    text-align: center;
+  }
+  
+  body, html {
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      scroll-behavior: smooth;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px #000000;
+    }
+  .title{
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .success {
+    color: #00ad5f;
+    text-align: center;
+  }
+  .info{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .main-btn {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    min-width: 10em;
+    max-width: 15em;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  .bg-image {
+    background: url("/static/images/mountain.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 4px;
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.75); /* Black w/opacity/see-through */
+    color: rgb(255, 255, 255);
+    border: 3px solid #f1f1f1;
+    border-radius: 50px;
+    position: relative;
+    margin-left: 15%;
+    top: auto;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .countryname{
+    font-size: 3em;
+    font-weight: bold;
+  }
+  .description{
+    text-align:center;
+    font-size: 1em;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .arrow {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: -20px;
+  }
+  .btn-outline-success, .btn-gloves {
+    font-size: 1.2em;
+    text-align: center;
+    margin: .08em;
+    padding: 1em;
+    min-width: 5em;
+  }
+  
+  .scrollup {
+    display: none; 
+    position: fixed; 
+    bottom: 90px; 
+    right: 30px; 
+    z-index: 99;
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px;
+    min-width: 6em;
+    max-width: 6em;
+  }
+  .scrolldown {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px; 
+    font-size: 18px;
+    min-width: 6em;
+    max-width: 6em;
+  }
+  
+  .col {
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 2200px) {
+    .bg-image {
+      height: 200%;
+    }
+    
+  @media only screen and (max-width: 900px) {
+    .bg-image {
+      height: 300%;
+    }
+    .bg-text{
+      font-size: 1em;
+    }
+    .arrow{
+      font-size: 1.2em;
+    }
+    .description{
+      font-size: 0.7em;
+    }
+    .countryname{
+      font-size: 2em;
+    }
+    .title{
+      font-size: 1.5em;
+    }
+    .search-bar input:focus,
+	  .search-bar input:valid {
+		background: transparent;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+		width: 10em;
+	}
+  } 
+  @media only screen and (max-width: 500px) {
+    .bg-image {
+      height: 300%;
+    }
+    .bg-text{
+      font-size: 1em;
+    }
+    .arrow{
+      font-size: 1.2em;
+    }
+    .description{
+      font-size: 0.7em;
+    }
+    .countryname{
+      font-size: 1.5em;
+    }
+    .flag{
+      size: 1em;
+    }
+    .search-bar input:focus,
+	  .search-bar input:valid {
+		background: transparent;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+		width: 7em;
+	}
+}
+@media only screen and (max-width: 390px) { 
+  .search-bar input:focus,
+  .search-bar input:valid {
+  background: transparent;
+  box-shadow: 0 0 0 0.1em #3d3d3d inset;
+  width: 5em;
+}
+@media only screen and (max-width: 300px) { 
+  .search-bar input:focus,
+  .search-bar input:valid {
+  background: transparent;
+  box-shadow: 0 0 0 0.1em #3d3d3d inset;
+  width: 3em;
+}
+.bg-text{
+  font-size: 0.7em;
+}
+.arrow{
+  font-size: 1.2em;
+}
+.description{
+  font-size: 0.7em;
+}
+.countryname{
+  font-size: 1.5em;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+background: transparent;
+box-shadow: 0 0 0 0.1em #3d3d3d inset;
+width: 5em;
+}
+}
+}
+}

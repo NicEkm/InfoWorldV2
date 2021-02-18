@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+ {% block head %}
+ <title>InfoWorld - Homepage</title>
+ <link rel="stylesheet" href="./static/css/home.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+<div class="bg-image"></div>
+<div class="bg-text">
+    <h1 class="title">Welcome to the InfoWorld!</h1>
+    <div class="description">
+        <p>This is web - application that let's you search information about any country with just one click! 
+        Just press the icon below and start your journey around the world! <br>Happy traveling! :)</p>
+    </div>
+    <div class="form-group">
+        <form method="POST" action="search" class="search-bar">
+            {% csrf_token %}
+            <input type="text" name="search" pattern=".*\S.*" required>
+            <button class="search-btn" type="submit">
+                <span>Search</span>
+            </button>
+        </form>
+        {% if error %}
+         <p class="info">{{error}}</p>
+        {% endif %}
+        {% if name %}
+            <h2 class="countryname">{{name}}{% if countrycode %}
+                <img class='flag' src="https://www.countryflags.io/{{countrycode}}/flat/64.png">
+            {% endif %}</h2>
+            <div class="arrow">
+                <span class="material-icons arrow">arrow_downward</span>
+                <br>
+            </div>
+        {% endif %}
+        {% if capital %}
+         <p class="info">Capital of the {{name}}: {{capital}}</p>
+        {% endif %}
+        {% if population %}
+         <p class="info">Population of the {{name}}: {{population}}</p>
+        {% endif %}
+        {% if currency_name %}
+         <p class="info">Currency of the {{name}} is: {{currency_name}}</p>
+        {% endif %}
+        {% if currency_symbol %}
+         <p class="info">Symbol of {{currency_name}} is: {{currency_symbol}}</p>
+        {% endif %}
+        {% if border_length %}
+         <p class="info">{{name}} have {{border_length}} border countries. <br>
+            {% if few_borders %}
+                {{few_borders}}
+            {% endif %}
+            <br>
+            {% if many_borders %}
+                {{many_borders}}
+            {% endif %}
+        </p>
+        {% endif %}
+        <br>
+    </div>
+</div>
+{% endblock content %}  
