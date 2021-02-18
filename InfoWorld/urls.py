@@ -23,9 +23,10 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url('/', views.homepage),
     url('home', views.homepage, name='home'),
     url('infoworld', views.infoworld, name='infoworld'),
     url('search', views.get_text, name='search'),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
